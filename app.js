@@ -5,7 +5,7 @@ async function scrapeWebPage(url){
     const response = await axios.get(url);
     const $ = cheerio.load(response.data);
 
-    $('h2').each((i, elem) => {
+    $('h2').each((i,elem) => {
         console.log($(elem).text());
     });
 }
